@@ -1,0 +1,34 @@
+#autor: SzymONOFF
+# https://github.com/SzymONOFF
+
+import random
+from os.path import join
+import os
+import getpass
+
+print("Ilu znakowe hasło chcesz?")
+ile_1 = int(input(">> "))
+print("Ile haseł chcesz wygenerować?")
+ile_2 = int(input(">> "))
+print("""Czy chcesz utworzyć plik z hasłami? [T/t - tak | inna odpowiedź nie]
+|Lokalizacja: Pulpit |
+|Nazwa: gen_haslo.txt|""")
+odp = input(">> ")
+
+def haslo():
+    znaki = "abcdefghijklmnoprstuvwxyz1234567890ABCDEFGHIJKLMNOPrSTUVWXYZ!@$%^&*()_-+[]{};/';.,"
+    haslo = "".join(random.sample(znaki,ile_1))
+    print(haslo)
+    if odp in ["T","t"]:
+        username = getpass.getuser()
+        path_0 = "C:/Users/{}/Desktop/"
+        path = path_0.format(username)
+        file = open(join(path, "gen_haslo.txt"),'a')
+        #file = open("gen_haslo.txt", "a")
+        file.write(haslo+"\n")
+        file.close()
+
+for x in range(ile_2):
+    haslo()
+    
+end = input("\n[KONIEC]")
