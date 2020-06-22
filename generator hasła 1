@@ -1,0 +1,14 @@
+#autor: SzymONOFF
+# https://github.com/SzymONOFF/
+
+import random
+print("Ilu znakowe hasło chcesz?")
+ile_1 = int(input(">> "))
+print("Ile haseł chcesz wygenerować?")
+ile_2 = int(input(">> "))
+def haslo():
+    znaki = "abcdefghijklmnoprstuvwxyz1234567890ABCDEFGHIJKLMNOPrSTUVWXYZ!@$%^&*()_-+[]{};/';.,"
+    haslo = "".join(random.sample(znaki,ile_1))
+    print(haslo)
+for x in range(ile_2):
+    haslo()
