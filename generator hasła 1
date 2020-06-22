@@ -1,5 +1,5 @@
 #autor: SzymONOFF
-# https://github.com/SzymONOFF
+# https://github.com/SzymONOFF/python-3
 
 import random
 print("Ilu znakowe hasło chcesz?")
