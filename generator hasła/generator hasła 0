@@ -1,0 +1,9 @@
+#autor: SzymONOFF
+# https://github.com/SzymONOFF/python-3
+
+import random
+znaki = "abcdefghijklmnoprstuvwxyz1234567890ABCDEFGHIJKLMNOPrSTUVWXYZ!@$%^&*()_-+[]{};/';.,"
+print("ilu znakowe hasło chcesz?")
+ile = int(input(">> "))
+haslo = "".join(random.sample(znaki,ile))
+print(haslo)
